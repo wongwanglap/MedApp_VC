@@ -1,0 +1,34 @@
+
+<ion-view cache-view="false"  title="Viewable users" id="Viewablepage223">
+  <ion-content padding="true" class="has-header">
+    <div id="peopleShareMeRecords-button-bar9" class="button-bar"></div>
+
+	  <div ng-repeat ="z in peoplegrantedme" id="peopleShareMeRecords-container2">
+		  <ion-list id="peopleShareMeRecords-list3">
+			  <ion-item class="dark" id="sharedList-item40">View permitted by： {{z.name_granter}}</ion-item>
+			  <ion-item class="dark" id="sharedList-item43">with UID： {{z.UID_granter}}</ion-item>
+			  <ion-item class="dark" id="sharedList-item41">Email： {{z.email_granter}}</ion-item>
+			  
+<!--				  <ion-item class="dark" id="sharedList-item40">current time： {{z.time}}</ion-item>
+			  <ion-item class="dark" id="sharedList-item41">Email： {{z.email_granter}}</ion-item>
+			<ion-item class="dark" id="sharedListitem39">My ID： {{z.UID_receiver}}</ion-item> 
+			  <ion-item class="dark" id="sharedList-item41">Title： {{z.title}}</ion-item>
+			  <ion-item class="dark" id="sharedList-item41">Descriptions： {{z.descriptions}}</ion-item>
+			<ion-item class="dark" id="sharedList-item42">until： {{z.timestamp_expired}}</ion-item>
+-->
+		  </ion-list>  
+<!-- 		//Maybe later improvement ...	
+			//list by users and redirect to user records...
+		  <button ng-click="access(z.UID_granter, z.PID)" class="button button-primary button-block">View Records</button>
+-->
+		  <button ng-click="access(z.UID_granter)" class="button button-balanced button-block">View this user's records</button>
+		  
+		  <div class="spacer" style="height: 40px;"></div>
+		  
+	  </div>
+
+	</ion-content>
+</ion-view>
+
+
+

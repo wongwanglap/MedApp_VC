@@ -1,0 +1,26 @@
+<ion-view title="Welcome to MedApp" cache-view="false" nav-transition="none" id="page5">
+  <ion-content padding="true" scroll="false" class="has-header">
+    <form id="login-form1" class="list">
+      <ion-list id="login-list1">
+        <label class="item item-input" id="login-input1">
+          <span class="input-label">Email</span>
+          <input ng-model="data.email" type="email" placeholder="email">
+        </label>
+        <label class="item item-input" id="login-input2">
+          <span class="input-label">Password</span>
+          <input ng-model="data.password" type="password" placeholder="password">
+        </label>
+      </ion-list>
+		<div class="spacer" style="height: 40px;"></div>
+
+		<button ng-click="login(data)" class="button button-stable button-block ">Log In</button>
+		
+		<a ui-sref="signup()" id="login-button2" class="button button-positive button-block button-clear">Or create an account</a>
+	<!--	
+		<div class="item item-text-wrap">
+			Response: <b ng-bind="response"></b>
+		</div>-->
+		
+	  </form>
+  </ion-content>
+</ion-view>

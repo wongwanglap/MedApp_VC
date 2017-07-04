@@ -1,0 +1,27 @@
+<ion-view title="Grant Access to" id="page18">
+  <ion-content padding="true" class="has-header">
+    <div id="grantAccessTo-button-bar7" class="button-bar"></div>
+    <div id="grantAccessTo-container13">
+		
+		<form name="grantForm" ng-submit="submit()">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">Email:</span>
+				<input type="email" name="email" placeholder="enter email" ng-model="data.email" required >
+			</label>
+					
+			<label class="item item-input">
+				<span class="input-label">Expire Date:</span>
+				<input type="date"  name="date" ng-model="Ddata.date" placeholder="yyyy-MM-dd" min="2013-01-01" max="2013-12-31" required />
+			</label>
+			
+			<input class="button button-block button-positive" type="submit" name="submit" value="Submit to server">
+		</form>
+
+		<div class="card">
+			<div class="item item-text-wrap">
+				Response: <b ng-bind="response"></b>
+			</div>
+		</div> 
+    </div>
+  </ion-content>
+</ion-view>

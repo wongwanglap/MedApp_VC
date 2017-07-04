@@ -1,0 +1,42 @@
+<ion-view cache-view="false"  title="My Record" id="Recordpage2" align-title="center">
+  <ion-content padding="true" class="has-header">
+    <div id="myProlife-button-bar1" class="button-bar"></div>
+	  <!--
+	  <a ui-sref="tabsController.recordsViewingList()" id="myProlife-button24" class="button button-positive button-block">See the list of People I Share my records to...</a>
+	  <a ui-sref="tabsController.shareRecordsTo()" id="recordsViewingList-button20" class="button button-positive button-block">Share Records to..</a>
+	  <a ui-sref="tabsController.grantAccessList()" id="myProlife-button8" class="button button-positive button-block">See the list of People I Granted Access to my profile...</a>
+-->
+	  
+	  <div class="spacer" style="height: 40px;"></div>
+	  
+	  <div ng-repeat ="x in names" id="myRecord-container2">
+		  <ion-list id="myRecord-list3">
+			<ion-item class="dark" id="myRecord-list-item39">Record ID： {{x.RID}}</ion-item> 
+			<ion-item class="dark" id="myRecord-list-item40">Title： {{x.title}}</ion-item>
+			<ion-item id="myRecord-list-item41">Descriptions: {{x.descriptions}}</ion-item> 
+			  <!--
+			<ion-item class="dark" id="myProlife-list-item39">my UID： {{x.UID}}</ion-item>
+			<ion-item class="dark" id="myProlife-list-item39">Origin_RID： {{x.Origin_RID}}</ion-item>
+			<ion-item class="dark" id="myProlife-list-item39">timestamp_add： {{x.timestamp_add}}</ion-item>
+	-->
+		  </ion-list>
+		  
+		  <button ng-click="Edit(x.RID)" class="button button-positive button-block">Edit</button>
+		  <button ng-click="Share(x.RID)" class="button button-balanced button-block">Share</button>
+		  <button ng-click="Delete(x.RID)" class="button button-dark button-block">Delete</button>
+		  
+		  <div class="spacer" style="height: 30px;"></div>
+		  <ion-list id="myRecord-list3">
+			  <ion-item class="dark" id="myRecord-list-item44">Record currently shared to:</ion-item>
+			  <div class="spacer" style="height: 20px;"></div>
+			  <div ng-repeat ="v in viewers" id="myRecord-container3">
+				  <ion-item class="dark" id="myRecord-list-item43">User: {{v.receiver_name}}</ion-item> 
+				  <ion-item class="dark" id="myRecord-list-item43">Email: {{v.receiver_email}}</ion-item>
+				  <ion-item class="dark" id="myRecord-list-item43">until  {{v.timestamp_expired}}</ion-item> 
+				  <div class="spacer" style="height: 10px;"></div>
+			  </div>
+		  </ion-list>
+		  <div class="spacer" style="height: 30px;"></div>
+	  </div>
+	</ion-content>
+</ion-view>

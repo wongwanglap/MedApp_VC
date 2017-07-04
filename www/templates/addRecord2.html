@@ -1,0 +1,30 @@
+<ion-view title="Add Record" id="Addpage7">
+  <ion-content padding="true" class="has-header">
+	  
+	  
+	  
+    <form ng-submit="submit()" id="addRecord2form3" class="list">
+      <label class="item item-input" id="addRecord2-input7">
+        <span class="input-label">Title</span>
+        <input type="text" placeholder="" ng-model="data.title">
+      </label>
+      <label class="item item-input" id="addRecord2-input8">
+        <span class="input-label">Description</span>
+        <input type="text" placeholder="" ng-model="data.description">
+      </label>
+		
+		<input class="button button-block button-positive" type="submit" name="submit" value="Add !">
+
+		<div class="card">
+			<div class="item item-text-wrap">
+				Response: <b ng-bind="response"></b>
+			</div>
+		</div>
+		
+    </form>
+	  
+	  
+	  
+	  
+  </ion-content>
+</ion-view>

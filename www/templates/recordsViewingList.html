@@ -1,0 +1,33 @@
+<ion-view cache-view="false"  title="Viewers List" id="Viewerspage14">
+  <ion-content padding="true" class="has-header">
+    <div id="grantAccessList-button-bar4" class="button-bar"></div>
+	  
+	  <div class="spacer" style="height: 40px;"></div>
+	 
+	  <div ng-repeat ="y in names" id="recordsViewingList-container2">
+		  
+			  <ion-list id="recordsViewingList-list3">
+				  <ion-item class="dark" id="recordsViewingList-item40">Shared record to： {{y.name_receiver}}</ion-item>
+				  <ion-item class="dark" id="recordsViewingList-item40">permission ID： {{y.PID}}</ion-item>
+<!--			  
+				  <ion-item class="dark" id="recordsViewingList-item40">Email： {{y.email_receiver}}</ion-item>
+				  <ion-item class="dark" id="recordsViewingList-item39">UID： {{y.UID_receiver}}</ion-item> 
+				  <ion-item class="dark" id="recordsViewingList-item40">my UID： {{y.UID_granter}}</ion-item>
+
+				  <ion-item id="recordsViewingList-item41" ng-model="data.RID">Record ID: {{y.RID}}</ion-item>
+				  <ion-item id="recordsViewingList-item41" ng-model="data.RID">Descriptions: {{y.descriptions}}</ion-item>
+				  <ion-item class="dark" id="grantAccessList-item42">Status： {{y.status}}</ion-item>	
+-->
+				  <ion-item id="recordsViewingList-item41" ng-model="data.RID">Title: {{y.title}}</ion-item>
+				  <ion-item class="dark" id="recordsViewingList-item42">until： {{y.timestamp_expired}}</ion-item>	
+			  </ion-list>
+		  	  
+<!--	  		  <button ng-click="submit(y.PID)" class="button button-primary button-block">Revoke this Permission</button> 
+-->
+			  <button ng-click="submit(y.PID)" ng-disabled=revokedisable(y.status) class="button button-primary button-block">{{buttontext(y.status)}}</button>	  
+	  <div class="spacer" style="height: 20px;"></div>
+
+	  </div>
+		  
+  </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view cache-view="false" title="Granter Profile" id="GranterPpage22">
+  <ion-content padding="true" class="has-header">
+	  <div id="granterProfile-button-bar10" class="button-bar"></div>
+	  <a ui-sref="tabsController.addRecord2()" id="myProlife-button7" target="_parent" class="button button-positive button-block">Add Record</a>
+	  
+	  <div class="spacer" style="height: 40px;"></div>
+	  
+	  <div ng-repeat ="x in granterprofile" id="myProlife-container2">
+      <ion-list id="myProlife-list3">
+        <ion-item class="dark" id="myProlife-list-item39">Record ID： {{x.RID}}</ion-item> 
+        <ion-item class="dark" id="myProlife-list-item39">Title： {{x.title}}</ion-item>
+        <ion-item id="myProlife-list-item40">Descriptions: {{x.descriptions}}</ion-item> 
+		  <!--
+        <ion-item class="dark" id="myProlife-list-item39">edited via AID： {{x.AID}}</ion-item> 
+        <ion-item class="dark" id="myProlife-list-item39">edited by UID： {{x.UID_editor}}</ion-item> 
+        <ion-item class="dark" id="myProlife-list-item39">granter UID： {{x.UID}}</ion-item>
+        <ion-item class="dark" id="myProlife-list-item39">Origin_RID： {{x.Origin_RID}}</ion-item>
+        <ion-item class="dark" id="myProlife-list-item39">timestamp_add： {{x.timestamp_add}}</ion-item>
+-->
+      </ion-list>
+		  
+      <button ng-click="Edit(x.RID)" class="button button-positive button-block">Edit</button>  
+		  
+	  <div class="spacer" style="height: 40px;"></div>
+ <!--     <a ui-sref="tabsController.editRecord()" id="myProlife-button6" class="button button-primary button-block">Edit</a> -->
+	  </div>
+	  
+  </ion-content>
+</ion-view>

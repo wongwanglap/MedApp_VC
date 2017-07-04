@@ -1,0 +1,31 @@
+<ion-view cache-view="false"  title="	People Granted Me Access" id="Grantedpage21">
+  <ion-content padding="true" class="has-header">
+		  <div class="spacer" style="height: 40px;"></div>
+    <div id="peopleGrantedMeAccess-button-bar9" class="button-bar"></div>
+
+	  <div ng-repeat ="z in peoplegrantedme" id="peoplegrantedmeaccess-container2">
+		  <ion-list id="peoplegrantedmeaccess-list3">
+			  <ion-item class="dark" id="grantAccessList-item40">Access granted by： {{z.name_granter}}</ion-item>
+			  <ion-item class="dark" id="grantAccessList-item41">Email： {{z.email_granter}}</ion-item>
+			<ion-item class="dark" id="grantAccessList-item42">until： {{z.timestamp_expired}}</ion-item>
+			<ion-item id="grantAccessListitem41" ng-model="data.AID">Access ID: {{z.AID}}</ion-item>
+		<ion-item class="dark" id="grantAccessList-item42">Granted by UID： {{z.UID_granter}}</ion-item>
+			  
+<!--				  <ion-item class="dark" id="grantAccessList-item43">current time： {{z.time}}</ion-item>
+			<ion-item class="dark" id="grantAccessList-item39">My ID： {{z.UID_receiver}}</ion-item> 
+-->
+		  </ion-list>
+		  
+		  <button ng-click="access(z.UID_granter, z.AID)" class="button button-balanced button-block">Access Profile</button>
+		  
+		  
+<!-- 		Maybe later improvement ...		  
+		  <button ng-click="submit(z.AID)" class="button button-primary button-block">Revoke my access</button>
+-->
+		  
+		  <div class="spacer" style="height: 40px;"></div>
+		  
+	  </div>
+
+	</ion-content>
+</ion-view>

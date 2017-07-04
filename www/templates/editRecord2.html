@@ -1,0 +1,27 @@
+<ion-view title="Edit Record" id="Editpage132">
+  <ion-content padding="true" class="has-header">
+
+	  
+    <form ng-submit="submit()" id="editrecord2form3" class="list">
+      <label class="item item-input" id="editrecord23-input7">
+        <span class="input-label">Title</span>
+        <input type="text" placeholder="updated title ..." ng-model="data.title">
+      </label>
+      <label class="item item-input" id="editrecord22-input8">
+        <span class="input-label">Description</span>
+        <input type="text" placeholder="updated description ...	" ng-model="data.description">
+      </label>
+		
+		<input class="button button-block button-positive" type="submit" name="submit" value="Edit !">
+
+		<div class="card">
+			<div class="item item-text-wrap">
+				Response: <b ng-bind="response"></b>
+			</div>
+		</div>
+		
+    </form>	  
+	  
+	  
+  </ion-content>
+</ion-view>

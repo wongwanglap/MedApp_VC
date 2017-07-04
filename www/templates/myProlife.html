@@ -1,0 +1,33 @@
+<ion-view cache-view="false"  title="My Prolife" id="Prolifepage2"align-title="center">
+  <ion-content padding="true" class="has-header">
+    <div id="myProlife-button-bar1" class="button-bar"></div>
+	  
+	  <a ui-sref="tabsController.addRecord()" id="myProlife-button7" target="_parent" class="button button-positive button-block">Add Record</a>
+	  <a ui-sref="tabsController.grantAccessTo()" id="grantAccessList-button20" class="button button-positive button-block">Grant someone Access</a>
+	  <a ui-sref="tabsController.permissionType()" id="grantAccessList-button20" class="button button-positive button-block">Access Control</a>
+	  <!--
+	  <a ui-sref="tabsController.grantAccessList()" id="myProlife-button8" class="button button-positive button-block">See the list of People I Granted Access to my profile...</a>
+	  <a ui-sref="tabsController.recordsViewingList()" id="myProlife-button24" class="button button-positive button-block">See the list of People I Share my records to...</a>
+	  <a ui-sref="tabsController.shareRecordsTo()" id="recordsViewingList-button20" class="button button-positive button-block">Share Records to..</a>
+-->
+	  
+	  
+	  <div class="spacer" style="height: 40px;"></div>
+	  
+	  <div ng-repeat ="x in names" id="myProlife-container2">
+		  <ion-list id="myProlife-list3">
+			<ion-item class="dark" id="myProlife-list-item39">Record ID： {{x.RID}}</ion-item> 
+			<ion-item class="dark" id="myProlife-list-item39">Title： {{x.title}}</ion-item>
+			  <!--
+			<ion-item class="dark" id="myProlife-list-item39">my UID： {{x.UID}}</ion-item>
+			<ion-item class="dark" id="myProlife-list-item39">Origin_RID： {{x.Origin_RID}}</ion-item>
+			<ion-item class="dark" id="myProlife-list-item39">timestamp_add： {{x.timestamp_add}}</ion-item>
+	-->
+		  </ion-list>
+
+			  <button ng-click="Edit(x.RID)" class="button button-balanced button-block">More</button>  
+		  <div class="spacer" style="height: 30px;"></div>
+	  </div>
+	  
+  </ion-content>
+</ion-view>
